@@ -10,17 +10,14 @@ escolha = int(input('''Digite a sua escolha
 3 - Os times em ordem alfabética;
 4 - A posição do Ceará;'''))
 
+
 if escolha == 1:
-    primeiros = tabela[0:5]
-    print(f'Os 5 primeiros colocados são: {primeiros}')
+    print(f'Os 5 primeiros colocados são: {tabela[0:5]}')
 elif escolha == 2:
-    ultimos = tabela[-4:]
-    print(f'Os 4 últimos colocados são: {ultimos}')
+    print(f'Os 4 últimos colocados são: {tabela[-4:]}')
 elif escolha == 3:
-    tabelaOrdem = sorted(tabela)
-    print(f'A tabela em ordem alfabética fica assim {tabelaOrdem}')
+    print(f'A tabela em ordem alfabética fica assim {sorted(tabela)}')
 elif escolha == 4:
-    posicaoCeara = tabela.index('Ceará')
-    print(f'O Ceará está na posição {posicaoCeara+1}')
+    print(f'O Ceará está na {tabela.index("Ceará")+1}ª posição')
 else:
     print('Opção inválida')
