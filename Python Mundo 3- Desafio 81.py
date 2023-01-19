@@ -1,4 +1,4 @@
-# Esse desafio fia mais simples que o anterior, agora fiz um algoritmo que leia quantos
+# Esse desafio foi mais simples que o anterior, agora fiz um algoritmo que leia quantos
 # algarismos o susário queira e os insere numa lista, ao final deve exibir na tela quantos 
 # números foram digitados, quais foram esses números em ordem decrescente e se o 5 faz ou não
 # parte dessa lista
