@@ -1,4 +1,4 @@
-#Tá dificil
+#Quase lá
 
 
 print('*' *30)
@@ -10,24 +10,26 @@ listaMaior =[]
 listaMenor=[]
 for c in range(0,5):
     novoNumero = int(input(f'Digite o número da posição {c}'))
-    if len(lista) == 0:
-        maiorNumero = menorNumero = novoNumero
-    else:
-        if novoNumero > maiorNumero:
-            maiorNumero = novoNumero
-        if novoNumero < menorNumero:
-            menorNumero = novoNumero
     lista.append(novoNumero)
-    
-listaPosicao=enumerate(lista)
-for maiorNumero, posicao in listaPosicao:
-    print(listaPosicao.index(maiorNumero))
 
 
-print(f'Lista padrão{lista}')
-print(f'Lista enumerada {list(listaPosicao)}')
-print(f'Maior numero {maiorNumero}')
-print(f'Menor numero {menorNumero}')
+maiorNumero = max(lista)
+listaMaior.append(lista.index(maiorNumero))
+if lista.count(maiorNumero) >1:
+    while len(listaMaior) <= lista.count(maiorNumero)-1:
+        listaMaior.append(lista.index(maiorNumero, len(listaMaior)+1))
+   
+menorNumero = min(lista)
+listaMenor.append(lista.index(menorNumero))
+if lista.count(menorNumero) >1:
+    while len(listaMenor) <= lista.count(menorNumero)-1:
+        listaMenor.append(lista.index(menorNumero, len(listaMenor)+1))
+
+print(f'Lista completa {lista}')
+print(f'Maior valor {maiorNumero}')
+print(f'Posição dos maiores valores {listaMaior}')
+print(f'Menor valor {menorNumero}')
+print(f'Posição dos menores valores {listaMenor}')
 
 print('*' *30)
 print(f"{'FIM':^30}")
