@@ -34,3 +34,7 @@ print(f"Foram cadastradas {contador} pessoas!")
 print(f"O maior peso foi de {maior[0]}, com {maior[1]}kg.")
 print(f"O menor peso foi de {menor[0]}, com {menor[1]}kg.")
 print(listaFinal)
+
+print('*' *30)
+print(f"{'FIM':^30}")
+print('*' *30)
