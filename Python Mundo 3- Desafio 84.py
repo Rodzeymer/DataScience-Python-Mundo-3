@@ -9,6 +9,9 @@
 # na tela quantas inserções foram feitas, os pesos máximos e mínimos, com seus respectivos nomes e 
 # imprime a lista final por último.
 
+# PS. Depois de ver a solução dp Guanabara decidi implementar o final por questões estéticas, mas o restante
+# continua autoral, agora fiquei satisfeito!
+
 print('*' *30)
 print(f"{'Python Mundo 3 - Desafio 84' :^30}")
 print('*' *30)
@@ -21,7 +24,7 @@ contador = 0
 
 while continuar == 's':
     listaPrevia.append(str(input(f"Nome da pessoa número {contador}: ")))
-    listaPrevia.append(int(input('Peso: ')))
+    listaPrevia.append(float(input('Peso: ')))
     listaFinal.append(listaPrevia[:])
     contador = contador + 1
     listaPrevia.clear()
@@ -31,9 +34,16 @@ while continuar == 's':
         menor=min(listaFinal, key=lambda item: item[1])
         break
 print(f"Foram cadastradas {contador} pessoas!")
-print(f"O maior peso foi de {maior[0]}, com {maior[1]}kg.")
-print(f"O menor peso foi de {menor[0]}, com {menor[1]}kg.")
-print(listaFinal)
+print(f"O maior peso foi de {maior[1]}kg.", end='')
+for p in listaFinal:
+    if p[1] == maior[1]:
+        print(f"[{p[0]}] ", end='')
+print()
+print(f"O menor peso foi de {menor[1]}kg.", end='')
+for p in listaFinal:
+    if p[1] == menor[1]:
+        print(f"[{p[0]}] ", end='')
+print()
 
 print('*' *30)
 print(f"{'FIM':^30}")
