@@ -1,3 +1,9 @@
+# Com o desafio 86 feito e esse sendo baseado nele ficou fácil, com alguns testes ficou tudo certo.
+
+# O algoritmo deve solicitar ao usuário 9 valores e organizá-los em uma matriz 3x3, colocando os valores
+# em sua respectiva posição de linha e coluna, mas exibindo algumas informações dessa matriz, como a 
+# soma dos números pares, a soma dos valores que estão na terceira coluna e o maior valor da segunda linha, 
+# com isso já extraindo algumas informações dessa matriz de dados.
 
 matriz = [[0,0,0], [0,0,0], [0,0,0]]
 somaPares=0
@@ -22,4 +28,7 @@ print('*' *30)
 print(f"A soma de todos os valores pares é {somaPares}")
 print(f"A soma dos valores da terceira coluna é {somaTerceira}")
 print(f"O maior valor da segunda linha é {maiorValorSegunda}")
+
+print('*' *30)
+print(f"{'FIM':^30}")
 print('*' *30)

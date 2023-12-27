@@ -2,6 +2,9 @@
 # me enganava e eu achava que não era assim, que teria uma forma mais prática de se fazer, mas no final
 # era assim mesmo
 
+# O algoritmo deve solicitar 9 valores ao usuário, construindo no final uma matriz 3x3, com os valores
+# organizados em linhas e colunas e organizado, de forma que fique bonito e legível.
+
 print('*' *30)
 print(f"{'Python Mundo 3 - Desafio 86' :^30}")
 print('*' *30)
@@ -15,6 +18,7 @@ for l in range(0,3):
     for c in range(0,3):
         print(f"[{matriz[l][c]:^5}]", end='')
     print()
+
 print('*' *30)
 print(f"{'FIM':^30}")
 print('*' *30)
