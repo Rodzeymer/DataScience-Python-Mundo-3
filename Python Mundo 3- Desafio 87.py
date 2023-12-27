@@ -5,6 +5,10 @@
 # soma dos números pares, a soma dos valores que estão na terceira coluna e o maior valor da segunda linha, 
 # com isso já extraindo algumas informações dessa matriz de dados.
 
+print('*' *30)
+print(f"{'Python Mundo 3 - Desafio 87' :^30}")
+print('*' *30)
+
 matriz = [[0,0,0], [0,0,0], [0,0,0]]
 somaPares=0
 somaTerceira = 0
