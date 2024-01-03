@@ -1,20 +1,16 @@
-# desafio 90
+# desafio 91
 
-turma = []
-aluno = {}
-contador = 0
-while True:
-    aluno['nome'] = str(input(f"Digite o nome do aluno: "))
-    aluno['media'] = float(input(f"Digite a média de {aluno['nome']}: "))
-    if aluno['media'] >=7:
-        aluno['final'] = "Aprovado"
-    else:
-        aluno['final'] = "Reprovado"
-    turma.append(aluno.copy())
-    continuar = str(input("Quer continuar? S/N"))
-    if continuar in 'Nn':
-        break
-for integrante in turma:
-    print(f"O aluno {integrante['nome']} obteve média {integrante['media']} estando portanto {integrante['final']}.")
+import random
+contador = 1
+jogadas = []
+jogo = {}
 
-        
+for sorteio in range (0,4):
+    jogadas['Jogador'] = contador
+    jogadas['Resultado'] = random.randint(1,6)
+    contador = contador + 1
+    jogo.append(jogadas.copy())
+print(jogadas)
+print(jogo)
+for i in sorted(jogadas, key = jogadas.get):
+    print(i, jogadas[i])
