@@ -10,6 +10,8 @@ for sorteio in range (0,4):
     jogadas['Resultado'] = random.randint(1,6)
     contador = contador + 1
     jogo.append(jogadas.copy())
+    print(jogadas)
+    print(jogo)
 print(jogadas)
-organizado = jogadas.
-print(organizado)
+for i in sorted(jogadas, key = jogadas.get):
+    print(i, jogadas[i])
