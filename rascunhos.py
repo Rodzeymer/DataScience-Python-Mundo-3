@@ -23,3 +23,13 @@ print(jogador)
 print(f"Gols {gols}")
 print(totalGols)
 print(partidas)
+
+# Achei esse de baixo mais simples, depois continuo!
+
+jogador = {}
+
+jogador['Nome'] = str(input("Qual o nome do jogador?"))
+jogador['Partidas'] = int(input(f"De quantos jogos {jogador['Nome']} participou?"))
+
+for c in range(1, jogador['Partidas']+1):
+    print(f"Partida {c}")
