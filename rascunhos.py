@@ -1,35 +1,20 @@
-# desafio 93
-
-# nome do jogador 
-# quantas partidas
- #    quantos gols em cada jogador
-  #   total de gols
-# imprime gols/partidas
-gols = []
-partidas = {}
 jogador = {}
-totalGols = 0
-
-jogador['Nome'] = str(input('Digite o nome do jogador'))
-numPartidas = int(input(f"Quantas partidas o jogador {jogador['Nome']} jogou nessa temporada?"))
-
-for c in range (1, numPartidas+1):
-    partidas['Partida [c]'] = int(input(f"Quantos gols o jogador {jogador['Nome']} marcou na partida {c}?"))
-    jogador['Gols'] = (partidas['Partida [c]'].copy())
-    totalGols = totalGols + partidas['Partida [c]']
-    partidas[c] = (f"Partida {c}: {partidas['Partida [c]']}")
-aproveitamento = totalGols/numPartidas
-print(jogador)
-print(f"Gols {gols}")
-print(totalGols)
-print(partidas)
-
-# Achei esse de baixo mais simples, depois continuo!
-
-jogador = {}
+golsFeitos = []
+golTotal = 0
 
 jogador['Nome'] = str(input("Qual o nome do jogador?"))
 jogador['Partidas'] = int(input(f"De quantos jogos {jogador['Nome']} participou?"))
 
 for c in range(1, jogador['Partidas']+1):
-    print(f"Partida {c}")
+    gols = int(input(f"Quantos gols {jogador['Nome']} fez no jogo {c}?"))
+    golTotal = golTotal + gols
+    golsFeitos.append(gols)
+jogador['GolsFeitos'] = golsFeitos
+jogador['GolTotal'] = golTotal
+jogador['Rendimento'] = jogador['GolTotal']/jogador['Partidas']
+print(f"Rendimento {jogador['Rendimento']}")
+
+print(f"O jogador {jogador['Nome']} participou de {jogador['Partidas']} jogos")
+print(f"Com um total de {jogador['GolTotal']} gols, seu rendimento é {jogador['Rendimento']:0.0f} gols por partida")
+for c in range(0, jogador['Partidas']):
+    print(f"{' ':4}=> No jogo {c+1} fez {golsFeitos[c]} gols ")
