@@ -11,7 +11,6 @@
     # C: Uma lista com todas as mulheres;
     # D: Uma lista com todas as pessoas com idade acima da média.
 
-
 print('*' *30)
 print(f"{'Python Mundo 3 - Desafio 94' :^30}")
 print('*' *30)
