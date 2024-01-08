@@ -6,6 +6,7 @@ golsMarcados = []
 golTotal = 0
 
 while True:
+    jogador.clear()
     jogador['Nome'] = str(input("Qual o nome do jogador?"))
     jogador['Partidas'] = int(input(f"De quantos jogos {jogador['Nome']} participou?"))
     for c in range(1, jogador['Partidas']+1):
@@ -14,30 +15,36 @@ while True:
         golTotal = golTotal + gols
     jogador['Gols Feitos'] = golsMarcados.copy()
     jogador['GolTotal'] = golTotal
-    jogador['Rendimento'] = jogador['GolTotal']/jogador['Partidas']
+    rendimento = jogador['GolTotal']/jogador['Partidas']
+    jogador['Rendimento'] = round(rendimento,2)
+
     cadastro.append(jogador.copy())
     golTotal=0
     golsMarcados.clear()
-    continuar = str(input(f"Quer continuar? [S/N]"))
-    if continuar in 'Nn':
+    while True:
+        continuar = str(input(f"Quer continuar? [S/N]")).upper()[0]
+        if continuar in 'SN':
+            break
+        print('ERRO! Responda apenas S ou N.')
+    if continuar == 'N':
         break
-quantidadeJogador = len(cadastro)
 print(f"-="*15)
-print(f"{'COD':<4}{'Nome':<15}{'Gols':<15}{'Total':<4}")
-for codigo in range (0, quantidadeJogador):
-    print(f"{codigo:<4} {cadastro[codigo]['Nome']:<15} {cadastro[codigo]'Gols Feitos':<15}")
+print(f"{'COD':<4}{'Nome':<15}{'Partidas':<15}{'Gols':<15}{'Total':<15}{'Rendimento':<15}")
+for k, v in enumerate(cadastro):
+    print(f"{k:<4}", end='')
+    for d in v.values():
+        print(f"{str(d):<15}", end='')
+    print()
 
-
-print(f"Foram cadastrados {quantidadeJogador} jogadores")
-print(f"-="*15)
-
-
-#print(f"O jogador {jogador['Nome']} participou de {jogador['Partidas']} jogos")
-#for c in range(0, jogador['Partidas']):
-#    print(f"{' ':4}=> No jogo {c+1} fez {golsFeitos[c]} gols ")
-
-#print(f"Com um total de {jogador['GolTotal']} gols, seu rendimento é {jogador['Rendimento']:0.0f} gols por partida")
-
-print('*' *30)
-print(f"{'FIM':^30}")
-print('*' *30)
+while True:
+    busca = int(input('Deseja revisar dados de qual jogador? 999 encerra'))
+    if busca == 999:
+        break
+    if busca >= len(cadastro):
+        print(f"ERRO! Não existe tal jogador!")
+    else:
+        print(f"Levantamento do jogador {cadastro[busca]['Nome']}:")
+        print('-¨'*30)
+        for c in range(0, jogador['Partidas']):
+            print(f"{' ':4}=> No jogo {c+1} fez {cadastro[busca]['Gols Feitos'][c]} gols ")
+        print('-¨'*30)
