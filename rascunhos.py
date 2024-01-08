@@ -2,7 +2,7 @@
 
 cadastro = []
 jogador = {}
-golsFeitos = []
+golsMarcados = []
 golTotal = 0
 
 while True:
@@ -10,24 +10,25 @@ while True:
     jogador['Partidas'] = int(input(f"De quantos jogos {jogador['Nome']} participou?"))
     for c in range(1, jogador['Partidas']+1):
         gols = int(input(f"Quantos gols {jogador['Nome']} fez no jogo {c}?"))
+        golsMarcados.append(gols)
         golTotal = golTotal + gols
-    golsFeitos.append(golTotal)
-    jogador['GolsFeitos'] = golsFeitos
+    jogador['Gols Feitos'] = golsMarcados.copy()
     jogador['GolTotal'] = golTotal
     jogador['Rendimento'] = jogador['GolTotal']/jogador['Partidas']
-    continuar = str(input(f"Quer continuar? [S/N]"))
-
     cadastro.append(jogador.copy())
-    jogador.clear()
+    golTotal=0
+    golsMarcados.clear()
+    continuar = str(input(f"Quer continuar? [S/N]"))
     if continuar in 'Nn':
         break
-print(cadastro)
-print(golsFeitos)
-
-
-
 quantidadeJogador = len(cadastro)
-#print(f"Foram cadastrados {cadastro} jogadores")
+print(f"-="*15)
+print(f"{'COD':<4}{'Nome':<15}{'Gols':<15}{'Total':<4}")
+for codigo in range (0, quantidadeJogador):
+    print(f"{codigo:<4} {cadastro[codigo]['Nome']:<15} {cadastro[codigo]'Gols Feitos':<15}")
+
+
+print(f"Foram cadastrados {quantidadeJogador} jogadores")
 print(f"-="*15)
 
 
