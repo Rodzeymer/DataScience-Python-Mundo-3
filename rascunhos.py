@@ -1,10 +1,8 @@
-# desafio 97
-
 def linhas(mensagem):
-    tamanho = len(mensagem)
+    tamanho = len(mensagem)+4
     print('-'*tamanho)
-    print(mensagem)
+    print(f"  {mensagem:^4}  ")
     print('-'*tamanho)
     
 linhas('Mensagem1')
-linhas('Nemsagem bem longa para ver até onde vai essa bagaça')
+linhas('Mensagem bem longa para ver até onde vai essa bagaça')
