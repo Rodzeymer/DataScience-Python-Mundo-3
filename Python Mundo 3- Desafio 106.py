@@ -58,4 +58,7 @@ while True:
         ajudaInterativa(comando)
 
 titulo('Encerrando programa', 1)
-    
+
+print('*' *30)
+print(f"{'FIM':^30}")
+print('*' *30)
