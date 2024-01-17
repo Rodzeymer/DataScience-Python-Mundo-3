@@ -15,8 +15,8 @@ import moedas, emReal
 valor = float(input('Digite o valor: R$'))
 
 print(f"O valor {valor} agora é {moeda(valor)}")
-print(f"O valor {moeda(valor)} aumentado em 10% é {moeda(aumentar(valor, 1.1))}")
-print(f"O valor {moeda(valor)} reduzido em 13% é {moeda(diminuir(valor, 0.13))}")
+print(f"O valor {moeda(valor)} aumentado em 10% é {moeda(aumentar(valor, 10))}")
+print(f"O valor {moeda(valor)} reduzido em 13% é {moeda(diminuir(valor, 13))}")
 print(f"O valor {moeda(valor)} dobrado é {moeda(dobro(valor))}")
 print(f"O valor {moeda(valor)} pela metade é {moeda(metade(valor))}")
 

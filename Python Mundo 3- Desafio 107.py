@@ -17,8 +17,8 @@ import moedas
 
 valor = float(input('Digite o valor: R$'))
 
-print(f"O valor R${valor} aumentado em 10% é R${aumentar(valor, 1.1)}")
-print(f"O valor R${valor} reduzido em 13% é R${diminuir(valor, 0.13)}")
+print(f"O valor R${valor} aumentado em 10% é R${aumentar(valor, 10)}")
+print(f"O valor R${valor} reduzido em 13% é R${diminuir(valor, 13)}")
 print(f"O valor R${valor} dobrado é R${dobro(valor)}")
 print(f"O valor R${valor} pela metade é R${metade(valor)}")
 

@@ -25,7 +25,7 @@ def ajudaInterativa(comando):
     """Essa função pega o comando digitado pelo usuário e o coloca dentro do help(), realizando
     a pesquisa desejada, imprimindo o resultado usando a função titulo(), que coloca as cores
     definidas no texto.
-    :param: comando: Termo a ser pesquisado no help()
+    :comando: Termo a ser pesquisado no help()
     :return: Imprime o resultado da busca aplicando as cores determinadas na função titulo()
     """
     titulo(f"Acessando o manual do comando \'{comando}\'", 4)
