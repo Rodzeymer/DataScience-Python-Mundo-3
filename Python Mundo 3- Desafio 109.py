@@ -10,7 +10,7 @@ print('*' *30)
 print(f"{'Python Mundo 3 - Desafio 109' :^30}")
 print('*' *30)
 
-import moedas, emReal2
+import utilidades
 
 valor = float(input('Digite o valor: R$'))
 

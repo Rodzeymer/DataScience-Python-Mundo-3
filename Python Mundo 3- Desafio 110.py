@@ -9,7 +9,7 @@ print('*' *30)
 print(f"{'Python Mundo 3 - Desafio 110' :^30}")
 print('*' *30)
 
-import moeda
+import utilidades
 
 valor = float(input('Digite o valor: R$'))
 incremento = float(input('Digite o fator de incremento'))
