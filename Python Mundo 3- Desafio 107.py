@@ -13,7 +13,7 @@ print('*' *30)
 print(f"{'Python Mundo 3 - Desafio 107' :^30}")
 print('*' *30)
 
-import utilidades
+from utilidades import moeda
 
 valor = float(input('Digite o valor: R$'))
 
