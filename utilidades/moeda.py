@@ -54,18 +54,17 @@ def resumo(valor, incremento, decremento):
     :decremento: um valor de 0 a 100 de float para servir de fator de decremento
     """
     print('-'*35)
-    print(f"{'RESUMO DO VALOR':^35}")
+    print(f"{'RESUMO DO VALOR'.center(35)}")
     print('-'*35)
-    print(f"{'Preço analisado':<16} {moeda(valor):>16}")
-    print(f"{'Dobro do preço':<16} {moeda(dobro(valor)):>16}")
-    print(f"{'Metade do preço':<16} {moeda(metade(valor)):>16}")
-    print(f"{incremento}{'% de aumento':<12} {moeda(aumentar(valor, incremento)):>16}")
-    print(f"{decremento}{'% de redução':<12} {moeda(diminuir(valor, decremento)):>16}")
+    print(f"{'Preço analisado'} \t{moeda(valor)}")
+    print(f"{'Dobro do preço'} \t\t{moeda(dobro(valor))}")
+    print(f"{'Metade do preço'} \t{moeda(metade(valor))}")
+    print(f"{incremento}{'% de aumento'} \t\t{moeda(aumentar(valor, incremento))}")
+    print(f"{decremento}{'% de redução'} \t\t{moeda(diminuir(valor, decremento))}")
     print('-'*35)
 
-    # Este módulo guarda a função de formatação de valores para o real brasileiro, juntamente com 
-# o separador de milhar e a função moeda2 recebe mais um parâmetro dizendo se a formatação 
-# ocorre ou não
+# Este módulo guarda a função de formatação de valores para o real brasileiro e a função
+# moeda2 recebe mais um parâmetro dizendo se a formatação ocorre ou não
 
 def moeda(valor):
     """Essa função pega o valor inserido no sistema e retorna ele com uma formatação próxima
@@ -74,7 +73,7 @@ def moeda(valor):
     :valor: valor a ser manipulado em float
     :return: a saída em string
     """
-    emReal = str(f"R${valor:,.2f}")
+    emReal = str(f"R${valor:.2f}").replace('.', ',')
     return emReal
 
 def moeda2(valor, formatar):
@@ -87,6 +86,6 @@ def moeda2(valor, formatar):
     """
     emReal = valor
     if formatar == True:
-        emReal = str(f"R${valor:,.2f}")
+        emReal = str(f"R${valor:.2f}").replace('.', ',')
         return emReal
     return emReal
