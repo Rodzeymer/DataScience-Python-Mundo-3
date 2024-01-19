@@ -1,3 +1,15 @@
-import requests
-response = requests.get('https://pudim.com.br/')
-print(response.status_code) 
+# rascunho 114
+
+import urllib
+import urllib.request 
+
+site='http://pudim.com.br/'
+
+try:
+    urllib.request.urlopen(site)
+except urllib.error.URLError:
+    print(f"Não consegui acessa o {site}")
+else:
+    print(f"O site {site} foi acessado com sucesso")
+    print(site.read())
+    
