@@ -88,3 +88,7 @@ while True:
     else: 
         print('ERRO! Digite uma opção válida')
     sleep(2)
+
+print('*' *30)
+print(f"{'FIM':^30}")
+print('*' *30)
