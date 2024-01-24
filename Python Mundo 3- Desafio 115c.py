@@ -1,7 +1,13 @@
 # Parte 3 do Desafio 115, o 115c!
 
 # Finalizando o Desafio 115, nesta parte final incluímos as funções de escrita e aprimoramos a
-# leitura do arquivo para formatar a saída e deixar tudo visualmente amigável
+# leitura do arquivo para formatar a saída e deixar tudo visualmente amigável.
+
+# Nos desafios 114 e 115 troquei de ferramenta de testes para os algoritmos, o online-python.com já atendia as
+# necessidades dos projetos, então pesquisei e testei muito, o que melhor satisfez a atual demanda foi o 
+# colab.google/, que possui o Jupyter hospedado, sendo indicado para data science e machine learning. Se tiver
+# tempo jogo os códigos lá, testo e adapto um a um e deixo os notebooks exportados para o github, que vai 
+# servir para centralizar meus projetos, funcionando como portfólio.
 
 print('*' *30)
 print(f"{'Python Mundo 3 - Desafio 115c' :^30}")
