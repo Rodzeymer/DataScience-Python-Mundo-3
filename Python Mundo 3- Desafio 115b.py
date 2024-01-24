@@ -1,6 +1,8 @@
 # Parte 2 do Desafio 115, o 115b!
 
-# 
+# Continuando o Desafio 115, nessa segunda parte continuamos a fazer o pequeno sistema de 
+# cadastro de pessoas, agora além do menu com tratamento de erros, agora o sistema cria, abre e
+# lê arquivos de texto
 
 print('*' *30)
 print(f"{'Python Mundo 3 - Desafio 115b' :^30}")
@@ -70,7 +72,7 @@ def arquivoExiste(nomeArquivo):
   """A função verifica se o aruivo chamado existe, tentando abrí-lo, se não conseguir exibe
   uma mensagem de erro, se conseguir o fecha e exibe uma mensagem de arquivo encontrado
   :param arquivoNome: recebe o nome do arquivo a ser testado
-  :return: Se não encontrar o arquivo retorna False
+  :return: Se não encontrar o arquivo retorna False.
   """
   try:
     arquivoAbre = open(nomeArquivo, 'rt')
@@ -82,8 +84,9 @@ def arquivoExiste(nomeArquivo):
     
 
 def criarArquivo(nomeArquivo):
-  """Caso queira, um arquivo pode ser criado, com o nome dele sendo informado pelo sistema, o 
-  arquivo é fechado então, pode 
+  """Essa fnunção tenta abrir um arquivo de texto com o nome informado, se não conseguir tenta 
+  criar ele, fechando=o após o processo, podendo imprimir uma mensagem de erro.
+  :param nomeArquivo: Nome do arquivo a ser aberto/criado.
   """
   try:
     arquivoNovo = open(nomeArquivo, 'wt+')
@@ -93,7 +96,8 @@ def criarArquivo(nomeArquivo):
 
 
 def lerArquivo(nomeArquivo):
-  """
+  """Essa função tenta abrir uma arquivo com o nome informado, se não conseguir imprime uma
+  mensagem de erro, se conseguir imprime o conteúdo do arquivo.
   """
   try:
     arquivoAbre = open(nomeArquivo, 'rt')
